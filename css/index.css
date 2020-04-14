@@ -8,10 +8,8 @@ h1{
   }
   .wrapper{
     text-align: center;
-    border-radius: 10px;
   }
   .wrapper.all{
-    margin-bottom: 3%;
   }
   .title{
     display: inline-block;
