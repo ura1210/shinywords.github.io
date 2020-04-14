@@ -9,7 +9,9 @@ h1{
   .wrapper{
     text-align: center;
   }
-  .wrapper.all{
+  .idolicon{
+    width: 50%;
+    height: 50%;
   }
   .title{
     display: inline-block;
