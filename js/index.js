@@ -24,11 +24,6 @@ function getID(element) {
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-
+document.getElementById("start").addEventListener("click", shinywords.start, false);
 const targets = document.getElementsByClassName('idolicon');
-//document.getElementsByClassName("idolicon")[0].addEventListener("click", getID(this), false);
-//for分で要素数分ループ処理
-for(let i = 0; i < targets.length; i++){
-    //クリックイベントでアラートを表示する
-    targets[i].addEventListener('click', getID(this), false);
-  }
+document.getElementsByClassName("idolicon")[0].addEventListener("click", getID(this), false);
