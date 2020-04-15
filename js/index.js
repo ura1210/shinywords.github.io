@@ -7,8 +7,8 @@ class shinywords{
         sw.init();
         document.getElementById("start").style.display = "none";
         $.getJSON("./resources/wores.json", function (data) {
-            console.log(data[0][0]);
-            document.getElementById("words").textContent = data[0][0];
+            console.log(data);
+            document.getElementById("words").textContent = data[0];
         });
        // alert(data[0]);
     }
