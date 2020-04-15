@@ -1,6 +1,10 @@
-h1{
+  h1{
     text-align: center;
     font-family: "Kokoro"; 
+  }
+  h5{
+    font-family: "Kokoro"; 
+    margin-top: 0;
   }
   .all{
     width: 100%;
@@ -9,16 +13,14 @@ h1{
   .wrapper{
     text-align: center;
   }
-  .idolicon{
-    width: 50%;
-    height: 50%;
-  }
   .title{
     display: inline-block;
   }
   .container{
     text-align: center;
   }
-  .howto{
-    text-align: left;
+
+  .idolicon{
+    width: 30%;
+    height: 30%;
   }
