@@ -1,12 +1,12 @@
 "use strict";
 class shinywords{
-    counter = 0;
+    counter = 1;
     static start(){
         document.getElementById("start").style.display = "none";
         $.getJSON("./resources/wores.json", function (data) {
-            var arr = JSON.parse(data);
-            alert(arr);
             document.getElementById("words").textContent = data.mano;
+            document.getElementById(`resultbox${counter}`).attributes.src = "./pic/marubatu/Heart.png";
+            alert(data.mano[0]);
         });
         return;
     }
@@ -15,7 +15,7 @@ class shinywords{
         
     }
     static correctness(){
-        document.getElementById(`resultbox${counter}`).attributes.src = "";
+        document.getElementById(`resultbox${counter}`).attributes.src = "./pic/marubatu/Heart.png";
     }
 
 }
@@ -26,4 +26,4 @@ function getID(element) {
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-document.getElementsByClassName("idolicon").addEventListener("click", getID(this), false);
+//document.getElementsByClassName("idolicon").addEventListener("click", getID(this), false);
