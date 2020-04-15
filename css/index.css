@@ -22,6 +22,9 @@
   .container{
     text-align: center;
   }
+  .iconbox{
+    display: flex;
+  }
   .idolicon{
     width: 30%;
   }
