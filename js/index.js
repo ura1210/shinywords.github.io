@@ -45,6 +45,7 @@ class shinywords {
 
 
     createQuiz() {
+        console.log("createQuiz");
         $.getJSON("./resources/wores.json", function (data) {
             let num = getRandomInt(23);
             num = 1;
