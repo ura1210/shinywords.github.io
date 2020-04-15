@@ -3,7 +3,7 @@ class shinywords{
     static start(){
         document.getElementById("start").style.display = "none";
         document.getElementById("words").style.display = "block";
-        document.getElementById("words").textContent = "start";
+        document.getElementById("words").textContent = "startserif";
         $.getJSON("./resources/wores.json", function (data) {
             alert(data);
         });

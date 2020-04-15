@@ -2,7 +2,11 @@
     text-align: center;
     font-family: "Kokoro"; 
   }
+  h2{
+    margin: 0;
+  }
   h5{
+    font-size: 1rem;
     font-family: "Kokoro"; 
     margin-top: 0;
   }
@@ -26,6 +30,8 @@
     display: none;
   }
   .start{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+  }
+  .words{
+    font-size: 300%;
   }
