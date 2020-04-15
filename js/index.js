@@ -6,10 +6,11 @@ class shinywords{
         const sw = new shinywords();
         sw.init();
         document.getElementById("start").style.display = "none";
+        console.log(data);
+        console.log(data.words[0][0]);
         $.getJSON("./resources/wores.json", function (data) {
-            document.getElementById("words").textContent = data.words[0];
+            document.getElementById("words").textContent = data.words[0][0];
         });
-        console.log(data.words[0]);
         alert(data[0]);
     }
     answer(idol){
