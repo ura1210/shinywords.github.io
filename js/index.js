@@ -24,6 +24,4 @@ function getID(element) {
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-document.getElementById("start").addEventListener("click", shinywords.start, false);
-const targets = document.getElementsByClassName('idolicon');
-document.getElementsByClassName("idolicon")[0].addEventListener("click", getID(this), false);
+document.getElementById("mano").addEventListener("click", getID(this), false);
