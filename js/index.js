@@ -10,7 +10,7 @@ class shinywords{
             console.log(data.words[0][0]);
             document.getElementById("words").textContent = data.words[0][0];
         });
-        alert(data[0]);
+       // alert(data[0]);
     }
     answer(idol){
         this.counter++;
