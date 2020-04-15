@@ -21,4 +21,4 @@ class shinywords{
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-document.getElementById("mano").addEventListener("click", shinywords.getID("mano"), false);
+document.getElementById("mano").addEventListener("click",function(){shinywords.getID("mano")}, false);
