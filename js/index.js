@@ -3,10 +3,10 @@ class shinywords{
     counter = 0;
     static start(){
         document.getElementById("start").style.display = "none";
-        document.getElementById("words").style.display = "block";
-        document.getElementById("words").textContent = "startserif";
         $.getJSON("./resources/wores.json", function (data) {
-            alert(data.mano);
+            var arr = JSON.parse(data);
+            alert(arr);
+            document.getElementById("words").textContent = data.mano;
         });
         return;
     }
@@ -26,4 +26,4 @@ function getID(element) {
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-document.getElementsByClassName("idolicon").addEventListener("click", shinywords.getID(this), false);
+document.getElementsByClassName("idolicon").addEventListener("click", getID(this), false);

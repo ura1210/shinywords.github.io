@@ -10,6 +10,9 @@
     font-family: "Kokoro"; 
     margin-top: 0;
   }
+  footer{
+    color: blue;
+  }
   .wrapper{
     text-align: center;
   }
@@ -21,9 +24,6 @@
   }
   .idolicon{
     width: 30%;
-  }
-  .words{
-    display: none;
   }
   .start{
     width: 50%;
