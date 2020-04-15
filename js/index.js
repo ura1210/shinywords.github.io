@@ -5,7 +5,7 @@ class shinywords{
         document.getElementById("start").style.display = "none";
         $.getJSON("./resources/wores.json", function (data) {
             document.getElementById("words").textContent = data.mano;
-            document.getElementById(`resultbox${shinywords.counter}`).attributes.src = "./pic/marubatu/Heart.png";
+            document.getElementById(`resultbox${shinywords.counter}`).setAttribute('src', './pic/marubatu/Heart.png');           
             alert(data.mano[0]);
         });
         return;
@@ -15,14 +15,8 @@ class shinywords{
         
     }
     static correctness(){
-        document.getElementById(`resultbox${shinywords.counter}`).attributes.src = "./pic/marubatu/Heart.png";
     }
 
-}
-
-function getID(element) {
-    const id = element.id;
-    alert(id);
 }
 
 function getID(element) {
