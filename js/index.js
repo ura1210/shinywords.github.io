@@ -6,7 +6,7 @@ class shinywords {
         const sw = new shinywords();
         sw.init();
         document.getElementById("start").style.display = "none";
-        createQuiz();
+        sw.createQuiz();
 
     }
     answer(idol) {
