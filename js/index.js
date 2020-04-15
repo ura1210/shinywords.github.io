@@ -15,7 +15,7 @@ class shinywords{
         
     }
     static correctness(){
-        document.getElementById(`resultbox${counter}`).attributes.src = "./pic/marubatu/Heart.png";
+        document.getElementById(`resultbox${shinywords.counter}`).attributes.src = "./pic/marubatu/Heart.png";
     }
 
 }
@@ -25,5 +25,10 @@ function getID(element) {
     alert(id);
 }
 
+function getID(element) {
+    const id = element.id;
+    alert(id);
+}
+
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-//document.getElementsByClassName("idolicon").addEventListener("click", getID(this), false);
+document.getElementsByClassName("idolicon")[0].addEventListener("click", getID(this), false);
