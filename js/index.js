@@ -4,7 +4,7 @@ class shinywords {
     correctness = "";
     static start() {
         const sw = new shinywords();
-        sw.init();
+        sw.init(sw);
         document.getElementById("start").style.display = "none";
         sw.createQuiz();
 
@@ -17,9 +17,9 @@ class shinywords {
             document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
         }
     }
-    init() {
-        document.getElementById("mano").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("hiori").addEventListener("click", function () { this.answer(this) }, false);
+    init(sw) {
+        document.getElementById("mano").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("hiori").addEventListener("click", function () { sw.answer(this) }, false);
         document.getElementById("meguru").addEventListener("click", function () { this.answer(this) }, false);
         document.getElementById("kogane").addEventListener("click", function () { this.answer(this) }, false);
         document.getElementById("mamimi").addEventListener("click", function () { this.answer(this) }, false);
@@ -48,6 +48,7 @@ class shinywords {
         console.log("createQuiz");
         $.getJSON("./resources/wores.json", function (data) {
             let num = getRandomInt(23);
+            console.log(num);
             num = 1;
         switch (num) {
             case 0:
