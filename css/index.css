@@ -10,10 +10,6 @@
     font-family: "Kokoro"; 
     margin-top: 0;
   }
-  .all{
-    width: 100%;
-    height: 100%;
-  }
   .wrapper{
     text-align: center;
   }
@@ -34,4 +30,7 @@
   }
   .words{
     font-size: 300%;
+  }
+  .marubatu{
+    display: inline;
   }
