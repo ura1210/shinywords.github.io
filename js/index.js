@@ -7,6 +7,7 @@ class shinywords{
         $.getJSON("./resources/wores.json", function (data) {
             document.getElementById("words").textContent = data.mano[0];
         });
+        console.log(data[0]);
         alert(data[0]);
         return;
     }
