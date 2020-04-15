@@ -18,10 +18,9 @@ class shinywords{
 
 }
 
-function getID(element) {
-    const id = element.id;
-    console.log(id);
+function getID(idol) {
+    console.log(idol);
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-document.getElementById("mano").addEventListener("click", getID, false);
+document.getElementById("mano").addEventListener("click", getID("mano"), false);
