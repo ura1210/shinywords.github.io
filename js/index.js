@@ -7,9 +7,9 @@ class shinywords{
         sw.init();
         document.getElementById("start").style.display = "none";
         $.getJSON("./resources/wores.json", function (data) {
-            document.getElementById("words").textContent = data.mano[0];
+            document.getElementById("words").textContent = data.words[0];
         });
-        console.log(data[0]);
+        console.log(data.words[0]);
         alert(data[0]);
     }
     answer(idol){
