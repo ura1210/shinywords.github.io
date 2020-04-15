@@ -20,6 +20,7 @@ class shinywords{
 
 function getID(element) {
     const id = element.id;
+    console.log(id);
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
