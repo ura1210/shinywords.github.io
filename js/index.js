@@ -5,13 +5,13 @@ class shinywords{
         document.getElementById("start").style.display = "none";
         $.getJSON("./resources/wores.json", function (data) {
             document.getElementById("words").textContent = data.mano;
-            document.getElementById(`resultbox${counter}`).attributes.src = "./pic/marubatu/Heart.png";
+            document.getElementById(`resultbox${shinywords.counter}`).attributes.src = "./pic/marubatu/Heart.png";
             alert(data.mano[0]);
         });
         return;
     }
     static answer(idol){
-        counter++;
+        shinywords.counter++;
         
     }
     static correctness(){
