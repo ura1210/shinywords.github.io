@@ -24,4 +24,4 @@ function getID(element) {
 }
 
 document.getElementById("start").addEventListener("click", shinywords.start, false);
-document.getElementById("mano").addEventListener("click", getID(this), false);
+document.getElementById("mano").addEventListener("click", getID, false);
