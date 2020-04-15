@@ -1,6 +1,6 @@
 "use strict";
 class shinywords{
-    counter = 1;
+    static counter = 1;
     static start(){
         document.getElementById("start").style.display = "none";
         $.getJSON("./resources/wores.json", function (data) {
