@@ -10,8 +10,10 @@ class shinywords {
 
     }
     answer(idol) {
+        console.log(idol);
         this.counter++;
-        if (correctness === idol) {
+        if (this.correctness === idol) {
+            document.getElementById(`resultbox${this.counter}`).style.display = "block";
             document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
         } else {
             document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
@@ -20,41 +22,37 @@ class shinywords {
     init(sw) {
         document.getElementById("mano").addEventListener("click", function () { sw.answer(this) }, false);
         document.getElementById("hiori").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("meguru").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("kogane").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("mamimi").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("sakuya").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("yuika").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("kiriko").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("amana").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("tenka").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("tiyuki").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("kaho").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("tiyoko").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("juri").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("rinze").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("natsuha").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("asahi").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("fuyuko").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("mei").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("tooru").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("madoka").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("koito").addEventListener("click", function () { this.answer(this) }, false);
-        document.getElementById("hinana").addEventListener("click", function () { this.answer(this) }, false);
+        document.getElementById("meguru").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("kogane").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("mamimi").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("sakuya").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("yuika").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("kiriko").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("amana").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("tenka").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("tiyuki").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("kaho").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("tiyoko").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("juri").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("rinze").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("natsuha").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("asahi").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("fuyuko").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("mei").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("tooru").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("madoka").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("koito").addEventListener("click", function () { sw.answer(this) }, false);
+        document.getElementById("hinana").addEventListener("click", function () { sw.answer(this) }, false);
     }
 
-
     createQuiz() {
-        console.log("createQuiz");
         $.getJSON("./resources/wores.json", function (data) {
             let num = getRandomInt(23);
-            console.log(num);
             num = 1;
         switch (num) {
             case 0:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 1:
-                console.log(data.mano[getRandomInt(data.mano.length)]);
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 2:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
@@ -100,6 +98,9 @@ class shinywords {
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
         }
          });
+    }
+    showResult() {
+        console.log("createQuiz");
     }
 }
 
