@@ -46,11 +46,13 @@ class shinywords {
 
     createQuiz() {
         $.getJSON("./resources/wores.json", function (data) {
-            const num = getRandomInt(23);
+            let num = getRandomInt(23);
+            num = 1;
         switch (num) {
             case 0:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 1:
+                console.log(data.mano[getRandomInt(data.mano.length)]);
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 2:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
