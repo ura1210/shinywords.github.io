@@ -41,7 +41,10 @@ var app = new Vue({
             }
         },
         viewProblem: function () {
-            if(app.counter === 10) app.showResult();
+            if(app.counter === 10) {
+                app.showResult();
+                return;
+            }
             $.getJSON("./resources/wores.json", function (data) {
                 const num = getRandomInt(16);
                 switch (num) {
