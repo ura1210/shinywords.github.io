@@ -143,8 +143,17 @@ var app = new Vue({
             app.isPrev = true;
         },
         setResultImg: function () {
-            //if(app.correctnessNum)
-            app.resultImg = "./pic/madoka/madoka0.png";
+            if(app.correctnessNum === 0){
+                app.resultImg = "./pic/madoka/madoka0.png";
+            }else if(app.correctnessNum <= 3){
+                app.resultImg = "./pic/madoka/madoka1-3.png";
+            }else if(app.correctnessNum <= 6){
+                app.resultImg = "./pic/madoka/madoka4-6.png";
+            }else if(app.correctnessNum <= 9){
+                app.resultImg = "./pic/madoka/madoka7-9.png";
+            }else if(app.correctnessNum === 10){
+                app.resultImg = "./pic/madoka/madoka10.png";
+            }
         }
 
     }
