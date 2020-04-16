@@ -3,67 +3,15 @@ var app = new Vue({
     el: '#app',
     data: {
         words: "表示されるセリフであてよう",
-        counter:1,
-        isPrev:true,
-        correctness:"",
+        counter: 1,
+        isPrev: true,
+        correctness: "",
         image_src: "./pic/marubatu/batu.png",
     },
     methods: {
         start: function (event) {
             app.isPrev = false;
-            $.getJSON("./resources/wores.json", function (data) {
-                let num = getRandomInt(23);
-                num = 0;
-            switch (num) {
-                case 0:
-                    app.correctness = "mano";
-                    app.words = data.mano[getRandomInt(data.mano.length)];
-                case 1:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 2:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 3:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 4:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 5:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 6:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 7:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 8:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 9:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 10:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 11:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 12:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 13:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 14:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 15:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 16:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 17:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 18:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 19:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 20:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 21:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-                case 22:
-                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            }
-             });
+            app.viewProblem();
         },
         answer: function (idol) {
             app.counter++;
@@ -71,16 +19,75 @@ var app = new Vue({
                 console.log("正解");
                 document.getElementById(`resultbox${app.counter}`).style.display = "block";
                 document.getElementById(`resultbox${app.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
+                app.viewProblem();
             } else {
                 console.log("失敗");
                 document.getElementById(`resultbox${this.counter}`).style.display = "block";
                 document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
+                app.viewProblem();
             }
-
+        },
+        viewProblem: function () {
+            $.getJSON("./resources/wores.json", function (data) {
+                let num = getRandomInt(23);
+                num = 0;
+                switch (num) {
+                    case 0:
+                        app.correctness = "mano";
+                        app.words = data.mano[getRandomInt(data.mano.length)];
+                    case 1:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 2:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 3:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 4:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 5:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 6:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 7:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 8:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 9:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 10:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 11:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 12:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 13:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 14:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 15:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 16:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 17:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 18:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 19:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 20:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 21:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                    case 22:
+                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                }
+            });
+        },
+        showResult: function () {
+            console.log("showResult");
         }
 
-      }
-  })
+    }
+})
 
 
 class shinywords {
@@ -128,9 +135,6 @@ class shinywords {
         document.getElementById("madoka").addEventListener("click", function () { sw.answer(this) }, false);
         document.getElementById("koito").addEventListener("click", function () { sw.answer(this) }, false);
         document.getElementById("hinana").addEventListener("click", function () { sw.answer(this) }, false);
-    }
-    showResult() {
-        console.log("createQuiz");
     }
 }
 
