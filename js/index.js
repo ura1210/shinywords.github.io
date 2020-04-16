@@ -1,5 +1,5 @@
 "use strict";
-      // register modal component
+// register modal component
 Vue.component("modal", {
     template: "#modal-template"
 });
@@ -117,58 +117,6 @@ var app = new Vue({
     }
 })
 
-
-class shinywords {
-    counter = 1;
-    correctness = "";
-    static start() {
-        const sw = new shinywords();
-        sw.init(sw);
-        document.getElementById("start").style.display = "none";
-        sw.createQuiz();
-
-    }
-    answer(idol) {
-        console.log(idol.id);
-        this.counter++;
-        if (this.correctness === idol) {
-            document.getElementById(`resultbox${this.counter}`).style.display = "block";
-            document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
-        } else {
-            document.getElementById(`resultbox${this.counter}`).style.display = "block";
-            document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
-        }
-    }
-    init(sw) {
-        document.getElementById("mano").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("hiori").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("meguru").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("kogane").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("mamimi").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("sakuya").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("yuika").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("kiriko").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("amana").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("tenka").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("tiyuki").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("kaho").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("tiyoko").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("juri").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("rinze").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("natsuha").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("asahi").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("fuyuko").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("mei").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("tooru").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("madoka").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("koito").addEventListener("click", function () { sw.answer(this) }, false);
-        document.getElementById("hinana").addEventListener("click", function () { sw.answer(this) }, false);
-    }
-}
-
-
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
-
-//document.getElementById("start").addEventListener("click", shinywords.start, false);
