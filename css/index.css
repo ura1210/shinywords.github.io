@@ -22,6 +22,9 @@
   .row{
     display: flex;
   }
+  .col{
+    display: flex;
+  }
   .container{
     text-align: center;
   }
