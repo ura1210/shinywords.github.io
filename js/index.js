@@ -10,7 +10,7 @@ var app = new Vue({
         counter: 1,
         correctnessNum: 0,
         isPrev: true,
-        isEnd: false,
+        isEnd: true,
         text:"test",
         correctness: "",
         resultImg: ""
