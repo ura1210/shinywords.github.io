@@ -7,7 +7,7 @@ var app = new Vue({
         counter: 1,
         correctnessNum: 0,
         isPrev: true,
-        isEnd: true,
+        isEnd: false,
         text:"10問正解を目指そう！",
         correctness: "",
         resultImg: ""
