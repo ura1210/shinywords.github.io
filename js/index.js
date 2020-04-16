@@ -6,7 +6,7 @@ var app = new Vue({
         counter:1,
         isPrev:true,
         correctness:"",
-        image_src: "//pic/marubatu/batu.png",
+        image_src: "./pic/marubatu/batu.png",
     },
     methods: {
         start: function (event) {
@@ -16,6 +16,7 @@ var app = new Vue({
                 num = 0;
             switch (num) {
                 case 0:
+                    app.correctness = "mano";
                     app.words = data.mano[getRandomInt(data.mano.length)];
                 case 1:
                     document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
@@ -65,12 +66,13 @@ var app = new Vue({
              });
         },
         answer: function (idol) {
-            console.log(idol);
             app.counter++;
             if (app.correctness === idol) {
-                document.getElementById(`resultbox${this.counter}`).style.display = "block";
-                document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
+                console.log("正解");
+                document.getElementById(`resultbox${app.counter}`).style.display = "block";
+                document.getElementById(`resultbox${app.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
             } else {
+                console.log("失敗");
                 document.getElementById(`resultbox${this.counter}`).style.display = "block";
                 document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
             }
@@ -126,10 +128,6 @@ class shinywords {
         document.getElementById("madoka").addEventListener("click", function () { sw.answer(this) }, false);
         document.getElementById("koito").addEventListener("click", function () { sw.answer(this) }, false);
         document.getElementById("hinana").addEventListener("click", function () { sw.answer(this) }, false);
-    }
-
-    createQuiz() {
-       
     }
     showResult() {
         console.log("createQuiz");
