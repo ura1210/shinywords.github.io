@@ -28,6 +28,10 @@
   .words{
     font-size: 300%;
   }
+  .correctnessNum{
+    font-size: 200%;
+    color: #42b983;
+  }
   #resultbox1{
     display: none;
   }
