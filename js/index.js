@@ -10,12 +10,13 @@ class shinywords {
 
     }
     answer(idol) {
-        console.log(idol);
+        console.log(idol.id);
         this.counter++;
         if (this.correctness === idol) {
             document.getElementById(`resultbox${this.counter}`).style.display = "block";
             document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
         } else {
+            document.getElementById(`resultbox${this.counter}`).style.display = "block";
             document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
         }
     }
@@ -51,6 +52,7 @@ class shinywords {
             num = 1;
         switch (num) {
             case 0:
+                this.correctness = "mano";
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 1:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
@@ -103,6 +105,13 @@ class shinywords {
         console.log("createQuiz");
     }
 }
+
+var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
