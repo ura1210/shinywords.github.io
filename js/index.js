@@ -1,4 +1,8 @@
 "use strict";
+      // register modal component
+Vue.component("modal", {
+    template: "#modal-template"
+});
 var app = new Vue({
     el: '#app',
     data: {
@@ -7,6 +11,7 @@ var app = new Vue({
         isPrev: true,
         correctness: "",
         image_src: "./pic/marubatu/batu.png",
+        showModal: false,
     },
     methods: {
         start: function (event) {
@@ -28,6 +33,7 @@ var app = new Vue({
             }
         },
         viewProblem: function () {
+            if(app.counter === 10) app.showResult();
             $.getJSON("./resources/wores.json", function (data) {
                 let num = getRandomInt(23);
                 num = 0;
@@ -36,54 +42,76 @@ var app = new Vue({
                         app.correctness = "mano";
                         app.words = data.mano[getRandomInt(data.mano.length)];
                     case 1:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "hiori";
+                        app.words = data.hiori[getRandomInt(data.hiori.length)];
                     case 2:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "meguru";
+                        app.words = data.meguru[getRandomInt(data.meguru.length)];
                     case 3:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "kogane";
+                        app.words = data.kogane[getRandomInt(data.kogane.length)];
                     case 4:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "mamimi";
+                        app.words = data.mamimi[getRandomInt(data.mamimi.length)];
                     case 5:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "sakuya";
+                        app.words = data.sakuya[getRandomInt(data.sakuya.length)];
                     case 6:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "yuika";
+                        app.words = data.yuika[getRandomInt(data.yuika.length)];
                     case 7:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "kiriko";
+                        app.words = data.kiriko[getRandomInt(data.kiriko.length)];
                     case 8:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "amana";
+                        app.words = data.amana[getRandomInt(data.amana.length)];
                     case 9:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "tenka";
+                        app.words = data.tenka[getRandomInt(data.tenka.length)];
                     case 10:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "tiyuki";
+                        app.words = data.tiyuki[getRandomInt(data.tiyuki.length)];
                     case 11:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "kaho";
+                        app.words = data.kaho[getRandomInt(data.kaho.length)];
                     case 12:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "tiyoko";
+                        app.words = data.tiyoko[getRandomInt(data.tiyoko.length)];
                     case 13:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "juri";
+                        app.words = data.juri[getRandomInt(data.juri.length)];
                     case 14:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "rinze";
+                        app.words = data.rinze[getRandomInt(data.rinze.length)];
                     case 15:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "natsuha";
+                        app.words = data.natsuha[getRandomInt(data.natsuha.length)];
                     case 16:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "asahi";
+                        app.words = data.asahi[getRandomInt(data.asahi.length)];
                     case 17:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "fuyuko";
+                        app.words = data.fuyuko[getRandomInt(data.fuyuko.length)]; 
                     case 18:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "mei";
+                        app.words = data.mei[getRandomInt(data.mei.length)];
                     case 19:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "tooru";
+                        app.words = data.tooru[getRandomInt(data.tooru.length)];
                     case 20:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "madoka";
+                        app.words = data.madoka[getRandomInt(data.madoka.length)];
                     case 21:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "koito";
+                        app.words = data.koito[getRandomInt(data.koito.length)];
                     case 22:
-                        document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                        app.correctness = "hinana";
+                        app.words = data.hinana[getRandomInt(data.hinana.length)];
                 }
             });
         },
         showResult: function () {
-            console.log("showResult");
+            app.showModal  = true;
         }
 
     }

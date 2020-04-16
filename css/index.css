@@ -28,7 +28,7 @@
   .words{
     font-size: 300%;
   }
-  .resultbox{
+  #resultbox1{
     display: none;
   }
   .marubatu{
