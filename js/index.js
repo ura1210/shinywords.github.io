@@ -8,7 +8,8 @@ var app = new Vue({
     },
     methods: {
         start: function (event) {
-          this.words = createQuiz();
+            const sw = new shinywords();
+            this.words = sw.createQuiz();
         }
       }
   })
