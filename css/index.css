@@ -62,7 +62,9 @@
   #resultbox10{
     display: none;
   }
-
+  .twitter-share-button{
+    opacity: 0;
+  }
   .marubatu{
     display: inline;
   }

@@ -149,10 +149,6 @@ var app = new Vue({
             app.words = `10問中${app.correctnessNum}問正解`;
             app.setResultImg();
             app.isEnd = true;
-            app.isPrev = true;
-            var test = document.getElementById('index-banner');
-
-            test.insertAdjacentHTML('beforebegin','<a href=\"https://twitter.com/share?ref_src=twsrc%5Etfw\" class=\"twitter-share-button\" v-bind:data-text=\"text\"data-hashtags=\"シャニマスセリフクイズ\" data-lang=\"ja\" data-show-count=\"false\">Tweet</a>');
         },
         setResultImg: function () {
             if(app.correctnessNum === 0){
