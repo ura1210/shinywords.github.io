@@ -44,72 +44,95 @@ var app = new Vue({
                     case 0:
                         app.correctness = "mano";
                         app.words = data.mano[getRandomInt(data.mano.length)];
+                        break;
                     case 1:
                         app.correctness = "hiori";
                         app.words = data.hiori[getRandomInt(data.hiori.length)];
+                        break;
                     case 2:
                         app.correctness = "meguru";
                         app.words = data.meguru[getRandomInt(data.meguru.length)];
+                        break;
                     case 3:
                         app.correctness = "kogane";
                         app.words = data.kogane[getRandomInt(data.kogane.length)];
+                        break;
                     case 4:
                         app.correctness = "mamimi";
                         app.words = data.mamimi[getRandomInt(data.mamimi.length)];
+                        break;
                     case 5:
                         app.correctness = "sakuya";
                         app.words = data.sakuya[getRandomInt(data.sakuya.length)];
+                        break;
                     case 6:
                         app.correctness = "yuika";
                         app.words = data.yuika[getRandomInt(data.yuika.length)];
+                        break;
                     case 7:
                         app.correctness = "kiriko";
                         app.words = data.kiriko[getRandomInt(data.kiriko.length)];
+                        break;
                     case 8:
                         app.correctness = "amana";
                         app.words = data.amana[getRandomInt(data.amana.length)];
+                        break;
                     case 9:
                         app.correctness = "tenka";
                         app.words = data.tenka[getRandomInt(data.tenka.length)];
+                        break;
                     case 10:
                         app.correctness = "tiyuki";
                         app.words = data.tiyuki[getRandomInt(data.tiyuki.length)];
+                        break;
                     case 11:
                         app.correctness = "kaho";
                         app.words = data.kaho[getRandomInt(data.kaho.length)];
+                        break;
                     case 12:
                         app.correctness = "tiyoko";
                         app.words = data.tiyoko[getRandomInt(data.tiyoko.length)];
+                        break;
                     case 13:
                         app.correctness = "juri";
                         app.words = data.juri[getRandomInt(data.juri.length)];
+                        break;
                     case 14:
                         app.correctness = "rinze";
                         app.words = data.rinze[getRandomInt(data.rinze.length)];
+                        break;
                     case 15:
                         app.correctness = "natsuha";
                         app.words = data.natsuha[getRandomInt(data.natsuha.length)];
+                        break;
                     case 16:
                         app.correctness = "asahi";
                         app.words = data.asahi[getRandomInt(data.asahi.length)];
+                        break;
                     case 17:
                         app.correctness = "fuyuko";
-                        app.words = data.fuyuko[getRandomInt(data.fuyuko.length)]; 
+                        app.words = data.fuyuko[getRandomInt(data.fuyuko.length)];
+                        break;
                     case 18:
                         app.correctness = "mei";
                         app.words = data.mei[getRandomInt(data.mei.length)];
+                        break;
                     case 19:
                         app.correctness = "tooru";
                         app.words = data.tooru[getRandomInt(data.tooru.length)];
+                        break;
                     case 20:
                         app.correctness = "madoka";
                         app.words = data.madoka[getRandomInt(data.madoka.length)];
+                        break;
                     case 21:
                         app.correctness = "koito";
                         app.words = data.koito[getRandomInt(data.koito.length)];
+                        break;
                     case 22:
                         app.correctness = "hinana";
                         app.words = data.hinana[getRandomInt(data.hinana.length)];
+                        break;
                 }
             });
         },
