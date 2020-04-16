@@ -11,6 +11,7 @@ var app = new Vue({
         correctnessNum: 0,
         isPrev: true,
         isEnd: false,
+        text:"test",
         correctness: "",
         image_src: "./pic/marubatu/batu.png"
     },
