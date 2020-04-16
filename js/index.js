@@ -1,4 +1,19 @@
 "use strict";
+var app = new Vue({
+    el: '#app',
+    data: {
+        words: "表示されるセリフであてよう",
+        counter:1,
+        correctness:"",
+    },
+    methods: {
+        start: function (event) {
+          this.words = createQuiz();
+        }
+      }
+  })
+
+
 class shinywords {
     counter = 1;
     correctness = "";
@@ -49,11 +64,10 @@ class shinywords {
     createQuiz() {
         $.getJSON("./resources/wores.json", function (data) {
             let num = getRandomInt(23);
-            num = 1;
+            num = 0;
         switch (num) {
             case 0:
-                this.correctness = "mano";
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                return data.mano[getRandomInt(data.mano.length)];
             case 1:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 2:
@@ -106,12 +120,6 @@ class shinywords {
     }
 }
 
-var app = new Vue({
-    el: '#app',
-    data: {
-      message: 'Hello Vue!'
-    }
-  })
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
