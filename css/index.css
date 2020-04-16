@@ -19,14 +19,14 @@
   .title{
     display: inline-block;
   }
-  .col{
+  .iconcol{
     display: flex;
+  }
+  .idolicon{
+    width: 10%;
   }
   .container{
     text-align: center;
-  }
-  .iconbox{
-    display: flex;
   }
   .start{
     width: 50%;

@@ -4,11 +4,13 @@ var app = new Vue({
     data: {
         words: "表示されるセリフであてよう",
         counter:1,
+        isPrev:true,
         correctness:"",
         image_src: "//pic/marubatu/batu.png",
     },
     methods: {
         start: function (event) {
+            app.isPrev = false;
             $.getJSON("./resources/wores.json", function (data) {
                 let num = getRandomInt(23);
                 num = 0;
