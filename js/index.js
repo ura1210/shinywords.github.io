@@ -5,6 +5,7 @@ var app = new Vue({
         words: "表示されるセリフであてよう",
         counter:1,
         correctness:"",
+        image_src: require("./pic/marubatu/batu.png"),
     },
     methods: {
         start: function (event) {
@@ -60,8 +61,20 @@ var app = new Vue({
                     document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             }
              });
-            app.words = test;
+        },
+        answer: function (idol) {
+            console.log(idol);
+            app.counter++;
+            if (app.correctness === idol) {
+                document.getElementById(`resultbox${this.counter}`).style.display = "block";
+                document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
+            } else {
+                document.getElementById(`resultbox${this.counter}`).style.display = "block";
+                document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
+            }
+
         }
+
       }
   })
 
