@@ -35,8 +35,7 @@ var app = new Vue({
         viewProblem: function () {
             if(app.counter === 10) app.showResult();
             $.getJSON("./resources/wores.json", function (data) {
-                let num = getRandomInt(23);
-                num = 0;
+                const num = getRandomInt(16);
                 switch (num) {
                     case 0:
                         app.correctness = "mano";
@@ -112,6 +111,7 @@ var app = new Vue({
         },
         showResult: function () {
             app.showModal  = true;
+            app.isPrev = true;
         }
 
     }
