@@ -69,6 +69,7 @@ class shinywords {
             console.log("createQuiz");
         switch (num) {
             case 0:
+                console.log(data.mano[getRandomInt(data.mano.length)]);
                 return data.mano[getRandomInt(data.mano.length)];
             case 1:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
