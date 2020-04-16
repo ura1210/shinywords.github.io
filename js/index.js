@@ -9,7 +9,7 @@ var app = new Vue({
     methods: {
         start: function (event) {
             const sw = new shinywords();
-            const  test= sw.createQuiz();
+            const test= sw.createQuiz();
             console.log(test);
             app.words = test;
         }
@@ -70,8 +70,9 @@ class shinywords {
             num = 0;
         switch (num) {
             case 0:
-
-                return data.mano[getRandomInt(data.mano.length)];
+                let test = data.mano[getRandomInt(data.mano.length)];
+                console.log(test);
+                return test;
             case 1:
                 document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
             case 2:
