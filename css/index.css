@@ -19,12 +19,6 @@
   .title{
     display: inline-block;
   }
-  .iconcol{
-    display: flex;
-  }
-  .idolicon{
-    width: 10%;
-  }
   .container{
     text-align: center;
   }
