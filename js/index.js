@@ -9,12 +9,13 @@ var app = new Vue({
         words: "表示されるセリフであてよう",
         counter: 1,
         isPrev: true,
+        isEnd: false,
         correctness: "",
-        image_src: "./pic/marubatu/batu.png",
-        showModal: false,
+        image_src: "./pic/marubatu/batu.png"
     },
     methods: {
         start: function (event) {
+            app.isEnd = false,
             app.isPrev = false;
             app.viewProblem();
         },
@@ -110,7 +111,7 @@ var app = new Vue({
             });
         },
         showResult: function () {
-            app.showModal  = true;
+            app.isEnd = true;
             app.isPrev = true;
         }
 
