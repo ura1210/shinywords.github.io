@@ -8,6 +8,7 @@ var app = new Vue({
     data: {
         words: "表示されるセリフであてよう",
         counter: 1,
+        correctnessNum: 0,
         isPrev: true,
         isEnd: false,
         correctness: "",
@@ -23,6 +24,7 @@ var app = new Vue({
             app.counter++;
             if (app.correctness === idol) {
                 console.log("正解");
+                app.correctnessNum++;
                 document.getElementById(`resultbox${app.counter}`).style.display = "block";
                 document.getElementById(`resultbox${app.counter}`).setAttribute('src', './pic/marubatu/Heart.png');
                 app.viewProblem();
