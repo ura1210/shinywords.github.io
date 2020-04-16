@@ -17,6 +17,8 @@ var app = new Vue({
     },
     methods: {
         start: function (event) {
+            app.counter = 1;
+            correctnessNum = 0;
             app.isEnd = false,
             app.isPrev = false;
             app.viewProblem();
