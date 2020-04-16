@@ -143,7 +143,7 @@ var app = new Vue({
         showResult: function () {
             app.text = `10問中${app.correctnessNum}問正解`
             app.setResultImg();
-            app.words = " ",
+            app.words = "おわり",
             app.isEnd = true;
             app.isPrev = true;
         },
