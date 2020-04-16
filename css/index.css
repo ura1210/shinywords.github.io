@@ -65,3 +65,18 @@
   .marubatu{
     display: inline;
   }
+
+  @media screen and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+  h1 {
+    font-size: 2.2rem;
+  }
+  .words {
+    font-size:100%; 
+  }
+  .idolicon{
+    width: 30%;
+  }
+
+
+}
