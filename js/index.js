@@ -1,15 +1,18 @@
 "use strict";
+// データオブジェクト
+var data = { exwords: "表示されるセリフであてよう", }
+
 var app = new Vue({
     el: '#app',
     data: {
-        words: "表示されるセリフであてよう",
+        words: data,
         counter:1,
         correctness:"",
     },
     methods: {
         start: function (event) {
             const sw = new shinywords();
-            app.words = sw.createQuiz();
+            app.exwords = sw.createQuiz();
         }
       }
   })
