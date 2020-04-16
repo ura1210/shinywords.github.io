@@ -3,12 +3,12 @@
 var app = new Vue({
     el: '#app',
     data: {
-        words: "表示されるセリフであてよう",
+        words: "誰のセリフかな？",
         counter: 1,
         correctnessNum: 0,
         isPrev: true,
         isEnd: true,
-        text:"test",
+        text:"10問正解を目指そう！",
         correctness: "",
         resultImg: ""
     },
@@ -150,7 +150,7 @@ var app = new Vue({
             app.setResultImg();
             app.isEnd = true;
             app.isPrev = true;
-            document.getElementById(`tw`).style.left = 0;
+            twttr.widgets.load();
         },
         setResultImg: function () {
             if(app.correctnessNum === 0){
