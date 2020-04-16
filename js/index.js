@@ -8,9 +8,58 @@ var app = new Vue({
     },
     methods: {
         start: function (event) {
-            const sw = new shinywords();
-            const test= sw.createQuiz();
-            console.log(test);
+            $.getJSON("./resources/wores.json", function (data) {
+                let num = getRandomInt(23);
+                num = 0;
+            switch (num) {
+                case 0:
+                    app.words = data.mano[getRandomInt(data.mano.length)];
+                case 1:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 2:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 3:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 4:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 5:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 6:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 7:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 8:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 9:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 10:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 11:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 12:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 13:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 14:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 15:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 16:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 17:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 18:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 19:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 20:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 21:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+                case 22:
+                    document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
+            }
+             });
             app.words = test;
         }
       }
@@ -65,60 +114,7 @@ class shinywords {
     }
 
     createQuiz() {
-        $.getJSON("./resources/wores.json", function (data) {
-            let num = getRandomInt(23);
-            num = 0;
-        switch (num) {
-            case 0:
-                let test = data.mano[getRandomInt(data.mano.length)];
-                console.log(test);
-                return test;
-            case 1:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 2:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 3:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 4:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 5:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 6:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 7:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 8:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 9:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 10:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 11:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 12:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 13:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 14:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 15:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 16:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 17:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 18:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 19:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 20:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 21:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-            case 22:
-                document.getElementById("words").textContent = data.mano[getRandomInt(data.mano.length)];
-        }
-         });
+       
     }
     showResult() {
         console.log("createQuiz");
