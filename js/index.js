@@ -4,7 +4,7 @@ var app = new Vue({
     el: '#app',
     data: {
         words: "誰のセリフかな？",
-        counter: 1,
+        counter: 0,
         correctnessNum: 0,
         isPrev: true,
         isEnd: false,
@@ -14,7 +14,7 @@ var app = new Vue({
     },
     methods: {
         init: function (event) {
-            app.counter = 1;
+            app.counter = 0;
             app.correctnessNum = 0;
             for(let i = 1; i <= 10; i++){
                 document.getElementById(`resultbox${i}`).style.display = "none";
