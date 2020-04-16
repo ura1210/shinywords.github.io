@@ -13,7 +13,7 @@ var app = new Vue({
         isEnd: false,
         text:"test",
         correctness: "",
-        image_src: "./pic/marubatu/batu.png"
+        resultImg: ""
     },
     methods: {
         start: function (event) {
@@ -138,8 +138,13 @@ var app = new Vue({
         },
         showResult: function () {
             app.text = `10問中${app.correctnessNum}問正解`
+            app.setResultImg();
             app.isEnd = true;
             app.isPrev = true;
+        },
+        setResultImg: function () {
+            //if(app.correctnessNum)
+            app.resultImg = "./pic/madoka/madoka0.png";
         }
 
     }
