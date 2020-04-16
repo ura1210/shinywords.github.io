@@ -19,9 +19,6 @@
   .title{
     display: inline-block;
   }
-  .row{
-    display: flex;
-  }
   .col{
     display: flex;
   }
@@ -30,8 +27,6 @@
   }
   .iconbox{
     display: flex;
-  }
-  .idolicon{
   }
   .start{
     width: 50%;
