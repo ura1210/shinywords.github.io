@@ -29,7 +29,7 @@ var app = new Vue({
             } else {
                 console.log("失敗");
                 document.getElementById(`resultbox${this.counter}`).style.display = "block";
-                document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.png');
+                document.getElementById(`resultbox${this.counter}`).setAttribute('src', './pic/marubatu/batu.svg');
                 app.viewProblem();
             }
         },
