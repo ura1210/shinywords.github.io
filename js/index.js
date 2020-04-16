@@ -13,9 +13,6 @@ var app = new Vue({
         resultImg: ""
     },
     methods: {
-        window:onload = function() {  
-            alert('koko');
-           },
         init: function (event) {
             app.counter = 1;
             app.correctnessNum = 0;
@@ -153,6 +150,9 @@ var app = new Vue({
             app.setResultImg();
             app.isEnd = true;
             app.isPrev = true;
+            var test = document.getElementById('koko');
+
+            test.insertAdjacentHTML('beforebegin','<a href=\"https://twitter.com/share?ref_src=twsrc%5Etfw\" class=\"twitter-share-button\" v-bind:data-text=\"text\"data-hashtags=\"シャニマスセリフクイズ\" data-lang=\"ja\" data-show-count=\"false\">Tweet</a>');
         },
         setResultImg: function () {
             if(app.correctnessNum === 0){
