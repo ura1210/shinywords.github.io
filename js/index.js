@@ -7,12 +7,15 @@ var app = new Vue({
         counter: 1,
         correctnessNum: 0,
         isPrev: true,
-        isEnd: false,
+        isEnd: true,
         text:"test",
         correctness: "",
         resultImg: ""
     },
     methods: {
+        window:onload = function() {  
+            alert('koko');
+           },
         init: function (event) {
             app.counter = 1;
             app.correctnessNum = 0;
@@ -28,6 +31,7 @@ var app = new Vue({
             app.viewProblem();
         },
         answer: function (idol) {
+            if(app.isPrev) return;
             app.counter++;
             if (app.correctness === idol) {
                 app.correctnessNum++;
@@ -144,9 +148,9 @@ var app = new Vue({
             });
         },
         showResult: function () {
-            app.text = `10問中${app.correctnessNum}問正解`
+            app.text = `10問中${app.correctnessNum}問正解`;
+            app.words = `10問中${app.correctnessNum}問正解`;
             app.setResultImg();
-            app.words = "おわり",
             app.isEnd = true;
             app.isPrev = true;
         },
