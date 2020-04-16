@@ -5,7 +5,7 @@ var app = new Vue({
         words: "表示されるセリフであてよう",
         counter:1,
         correctness:"",
-        image_src: require("./pic/marubatu/batu.png"),
+        image_src: "./pic/marubatu/batu.png",
     },
     methods: {
         start: function (event) {
