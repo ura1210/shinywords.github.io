@@ -19,6 +19,9 @@
   .title{
     display: inline-block;
   }
+  .row{
+    display: flex;
+  }
   .container{
     text-align: center;
   }
