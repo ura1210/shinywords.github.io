@@ -66,7 +66,7 @@ class shinywords {
         $.getJSON("./resources/wores.json", function (data) {
             let num = getRandomInt(23);
             num = 0;
-            console.log(createQuiz);
+            console.log("createQuiz");
         switch (num) {
             case 0:
                 return data.mano[getRandomInt(data.mano.length)];
