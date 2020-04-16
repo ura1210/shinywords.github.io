@@ -9,7 +9,7 @@ var app = new Vue({
     methods: {
         start: function (event) {
             const sw = new shinywords();
-            this.words = sw.createQuiz();
+            app.words = sw.createQuiz();
         }
       }
   })
@@ -66,7 +66,6 @@ class shinywords {
         $.getJSON("./resources/wores.json", function (data) {
             let num = getRandomInt(23);
             num = 0;
-            console.log("createQuiz");
         switch (num) {
             case 0:
                 console.log(data.mano[getRandomInt(data.mano.length)]);
