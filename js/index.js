@@ -1,8 +1,5 @@
 "use strict";
-// register modal component
-Vue.component("modal", {
-    template: "#modal-template"
-});
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -19,8 +16,13 @@ var app = new Vue({
         init: function (event) {
             app.counter = 1;
             app.correctnessNum = 0;
+            for(let i = 1; i <= 10; i++){
+                document.getElementById(`resultbox${i}`).style.display = "none";
+            }
+            
         },
         start: function (event) {
+            app.init();
             app.isPrev = false;
             app.isEnd = false,
             app.viewProblem();
@@ -141,7 +143,7 @@ var app = new Vue({
         showResult: function () {
             app.text = `10問中${app.correctnessNum}問正解`
             app.setResultImg();
-            app.words = "",
+            app.words = " ",
             app.isEnd = true;
             app.isPrev = true;
         },
