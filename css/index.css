@@ -62,6 +62,9 @@
   #resultbox10{
     display: none;
   }
+  .reslt{
+    display: none;
+  }
 
   .marubatu{
     display: inline;

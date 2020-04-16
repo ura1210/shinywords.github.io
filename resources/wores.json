@@ -357,38 +357,24 @@
                 "今日は何か掴めそうな気がするわ…"
         ],
         "asahi": [
-                "red",
-                "green",
-                "blue"
+                "asahi"
         ],
         "fuyuko": [
-                "red",
-                "green",
-                "blue"
+                "fuyuko"
         ],
         "mei": [
-                "red",
-                "green",
-                "blue"
+                "mei"
         ],
         "tooru": [
-                "red",
-                "green",
-                "blue"
+                "tooru"
         ],
         "madoka": [
-                "red",
-                "green",
-                "blue"
+                "madoka"
         ],
         "koito": [
-                "red",
-                "green",
-                "blue"
+                "koito"
         ],
         "hinana": [
-                "red",
-                "green",
-                "blue"
+                "hinana"
         ]
 }
