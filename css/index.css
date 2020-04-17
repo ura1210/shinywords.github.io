@@ -32,6 +32,9 @@
     font-size: 200%;
     color: #42b983;
   }
+  .resultbox{
+    width: 50%;
+  }
   #resultbox1{
     display: none;
   }
@@ -82,6 +85,9 @@
   }
   .resultbox{
     display: flex;
+    width: auto;
   }
-
+  .row .col.s12 {
+    padding-right: 0;
+  }
 }
