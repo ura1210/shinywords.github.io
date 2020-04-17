@@ -75,8 +75,10 @@
     font-size:100%; 
   }
   .idolicon{
-    width: 30%;
+    width: 28%;
   }
-
+.resultbox{
+  display: flex;
+}
 
 }

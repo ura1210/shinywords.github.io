@@ -14,6 +14,8 @@ var app = new Vue({
     },
     methods: {
         init: function (event) {
+            app.isPrev = false;
+            app.isEnd = false,
             app.counter = 0;
             app.correctnessNum = 0;
             for(let i = 1; i <= 10; i++){
@@ -23,8 +25,6 @@ var app = new Vue({
         },
         start: function (event) {
             app.init();
-            app.isPrev = false;
-            app.isEnd = false,
             app.viewProblem();
         },
         answer: function (idol) {
