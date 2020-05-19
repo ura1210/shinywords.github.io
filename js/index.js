@@ -46,8 +46,8 @@ var app = new Vue({
                 app.showResult();
                 return;
             }
-            $.getJSON("./resources/wores.json", function (data) {
-                const num = getRandomInt(16);
+            $.getJSON("./resources/Lines.json", function (data) {
+                const num = getRandomInt(22);
                 switch (num) {
                     case 0:
                         app.correctness = "mano";
